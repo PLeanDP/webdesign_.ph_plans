@@ -48,7 +48,8 @@ CREATE TABLE IF NOT EXISTS request
 	location TEXT,
 	contact_no CHAR(15),
 	email_add CHAR(30),
-	designer_id char(70)  NOT NULL
+	designer_id char(70)  NOT NULL,
+	PRIMARY KEY (id)
 	);
 
 
