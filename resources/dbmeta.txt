@@ -3,10 +3,8 @@ USE webdesign;
 
 CREATE TABLE IF NOT EXISTS admin
 	(
-	id INT(10) NOT NULL AUTO_INCREMENT,
 	username CHAR(20) NOT NULL,
-	password CHAR(20) NOT NULL,
-	PRIMARY KEY (id)
+	password CHAR(20) NOT NULL
 	);
 
 
@@ -43,26 +41,17 @@ CREATE TABLE IF NOT EXISTS designer_sites
 	);
 
 
-CREATE TABLE IF NOT EXISTS client
+CREATE TABLE IF NOT EXISTS request
 	(
-	id INT(10) NOT NULL AUTO_INCREMENT,
 	name char(150) NOT NULL,
 	location TEXT,
 	contact_no CHAR(15),
 	email_add CHAR(30),
-	PRIMARY KEY (id)
-	);
-
-CREATE TABLE IF NOT EXISTS request
-	(
-	client_id char(10),
-	designer_id char(50)
+	designer_id char(70)  NOT NULL
 	);
 
 
 
 
+alter table designer_account add constraint foreign key(id) references designer(id);
 
-alter table REQUEST add constraint foreign key(client_id) references CLIENT(username);
-alter table REQUEST add constraint foreign key(des_id) references DESIGNER(username);
-alter table DES_WEB_IMG add constraint foreign key(des_id) references DESIGNER(username);
