@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS webdesign;
-USE webdesign;
+CREATE DATABASE IF NOT EXISTS dotph_webdesign;
+USE dotph_webdesign;
 
 CREATE TABLE IF NOT EXISTS admin
 	(
