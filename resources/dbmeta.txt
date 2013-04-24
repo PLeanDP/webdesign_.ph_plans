@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS designer_sites
 
 CREATE TABLE IF NOT EXISTS request
 	(
+	id int(10) not null auto_increment,
 	name char(150) NOT NULL,
 	location TEXT,
 	contact_no CHAR(15),
